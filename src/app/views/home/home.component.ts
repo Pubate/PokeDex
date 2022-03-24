@@ -18,7 +18,13 @@ export class HomeComponent implements OnInit {
     private router: Router,) { }
 
   ngOnInit(): void {
+    this.load()
+  }
 
+  load(){
+    this.pokemonService.getAllMonster().subscribe(res=>{
+      this.pokemon = res.results
+    })
   }
 
   async searchMonster() {
