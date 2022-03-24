@@ -7,21 +7,18 @@
 
     <div class="ui segments">
         <div class="ui segment">
-          <h1>{{detail.name}}</h1>
+            <h1>{{detail?.name}}</h1>
         </div>
         <div class="ui segment">
-          <p><strong>height:</strong> {{detail.height}}</p>
-          <p><strong>weight:</strong>  {{detail.weight}}</p>
+            <p><strong>height:</strong> {{detail?.height}}</p>
+            <p><strong>weight:</strong> {{detail?.weight}}</p>
         </div>
         <div class="ui segment">
-          <p>Middle</p>
+            <p><strong>Abilities</strong></p>
+            <div class="ui bulleted list" *ngIf="detail?.abilities">
+                <div class="item" *ngFor="let a of detail.abilities" >{{a.ability?.name}}</div>
+            </div>
         </div>
-        <div class="ui segment">
-          <p>Middle</p>
-        </div>
-        <div class="ui segment">
-          <p>Bottom</p>
-        </div>
-      </div>
+    </div>
 
 </div>
