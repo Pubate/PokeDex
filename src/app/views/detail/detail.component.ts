@@ -1,6 +1,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from 'src/app/services/pokemon.service';
+import { iDetail } from 'src/app/model/detail.interface';
 
 @Component({
   selector: 'app-detail',
@@ -9,7 +10,8 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 })
 export class DetailComponent implements OnInit {
 
-  detail:string = ''
+  detail: any; 
+  
   constructor(
     private pokemonService: PokemonService,
     private activatedRoute: ActivatedRoute,) { }
@@ -23,9 +25,8 @@ export class DetailComponent implements OnInit {
 
   loadMonsterDetail(url:string){
     this.pokemonService.getMonsterDetail(url).subscribe(res=>{
-      this.detail = JSON.stringify(res)
+      this.detail = res
       console.log(res);
-      
     })
   }
 

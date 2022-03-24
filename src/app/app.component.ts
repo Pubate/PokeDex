@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { iCovid } from './model/covid.interface';
-import { Covid } from './model/covid.model';
 
 @Component({
   selector: 'app-root',

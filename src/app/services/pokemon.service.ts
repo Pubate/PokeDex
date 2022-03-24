@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { iDetail } from '../model/detail.interface';
 import { iPokemon } from '../model/poke.interface';
 
 @Injectable({
@@ -30,6 +31,6 @@ export class PokemonService {
   }
 
   getMonsterDetail(url:string){
-    return this.http.get<any>(url)
+    return this.http.get<iDetail>(url)
   }
 }
