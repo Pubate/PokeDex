@@ -24,6 +24,14 @@
                         </div>
                     </div>
                 </div>
+                <div *ngIf="pokemon.length > 100">
+                    <h2 class="ui icon center aligned header">
+                        <div class="content">
+                            found {{pokemon.length}} Monster
+                          <div class="sub header">Less than 100 for display</div>
+                        </div>
+                      </h2>
+                </div>
             </div>
         </div>
     </div>
